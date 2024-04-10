@@ -1,0 +1,314 @@
+###################
+SignUP API
+####################
+
+
+Server response
+Code	Details
+200	
+Response body
+Download
+{
+  "message": "User signed-up successfully"
+}
+Response headers
+ content-length: 47 
+ content-type: application/json 
+ date: Sun, 03 Dec 2023 17:31:21 GMT 
+ server: Werkzeug/2.0.2 Python/3.11.4 
+Responses
+ 
+
+####################
+Login API
+####################
+Server response
+Code	Details
+200	
+Response body
+Download
+{
+  "message": "User logged in"
+}
+Response headers
+ content-length: 34 
+ content-type: application/json 
+ date: Sun, 03 Dec 2023 17:33:34 GMT 
+ server: Werkzeug/2.0.2 Python/3.11.4 
+ vary: Cookie 
+Responses
+ 
+####################
+Logout API
+####################
+
+Server response
+Code	Details
+200	
+Response body
+Download
+{
+  "message": "User is successfully logged out"
+}
+Response headers
+ content-length: 51 
+ content-type: application/json 
+ date: Sun, 03 Dec 2023 17:46:22 GMT 
+ server: Werkzeug/2.0.2 Python/3.11.4 
+ vary: Cookie 
+Responses
+
+####################
+Vendor API/add_vendor
+####################
+ 
+Server response
+Code	Details
+200	
+Response body
+Download
+{
+  "message": "Vendor is successfully added."
+}
+Response headers
+ content-length: 49 
+ content-type: application/json 
+ date: Sun, 03 Dec 2023 17:48:01 GMT 
+ server: Werkzeug/2.0.2 Python/3.11.4 
+ vary: Cookie 
+Responses
+Code
+
+
+####################
+Vendor API/list_vendors
+####################
+ 
+Server response
+Code	Details
+200
+Undocumented
+Response body
+Download
+{
+  "vendors": [
+    {
+      "name": "vendor_1",
+      "vendor_id": "c8abb56e-7953-4ad7-9040-57cd8519e486"
+    }
+  ]
+}
+Response headers
+ content-length: 120 
+ content-type: application/json 
+ date: Sun, 03 Dec 2023 17:48:41 GMT 
+ server: Werkzeug/2.0.2 Python/3.11.4 
+ vary: Cookie 
+Responses
+Code
+ 
+ 
+ 
+####################
+Create Item Order API/create_items_order
+####################
+Server response
+Code	Details
+200	
+Response body
+Download
+{
+  "message": "Bread added to the inventory."
+}
+Response headers
+ content-length: 49 
+ content-type: application/json 
+ date: Sun, 03 Dec 2023 17:50:26 GMT 
+ server: Werkzeug/2.0.2 Python/3.11.4 
+ vary: Cookie 
+Responses
+Code
+
+
+####################
+Create Item Order API/create_items_order
+####################
+
+
+-------------------
+JSON Input
+
+{
+   "items":[
+      {
+         "item_id" :"710763bd-6002-43db-9f22-0b0e72a92fb9",
+         "quantity"  :2
+      },
+      {
+         "item_id" :"97a00458-b74f-4249-a001-54970d2bd1d7",
+         "quantity"  :3
+      }
+
+   ]
+}
+
+
+
+------------------
+ 
+Server response
+Code	Details
+200	
+Response body
+Download
+{
+  "message": "Item order created successfully!"
+}
+Response headers
+ content-length: 52 
+ content-type: application/json 
+ date: Sun, 03 Dec 2023 17:56:53 GMT 
+ server: Werkzeug/2.0.2 Python/3.11.4 
+ vary: Cookie 
+Responses
+Code
+
+
+#####################
+
+Place Order API/place_order
+
+####################
+
+Server response
+Code	Details
+200	
+Response body
+Download
+{
+  "message": "Order placed successfully."
+}
+Response headers
+ content-length: 46 
+ content-type: application/json 
+ date: Sun, 03 Dec 2023 18:02:12 GMT 
+ server: Werkzeug/2.0.2 Python/3.11.4 
+ vary: Cookie 
+Responses
+Code	Description
+default	
+Example Value
+Model
+{
+  "message": "string"
+}
+
+
+####################
+list order by customer/list_orders
+####################
+
+Server response
+Code	Details
+200
+Undocumented
+Response body
+Download
+{
+  "orders": [
+    {
+      "items": [
+        {
+          "item_id": "710763bd-6002-43db-9f22-0b0e72a92fb9",
+          "quantity": 2
+        },
+        {
+          "item_id": "97a00458-b74f-4249-a001-54970d2bd1d7",
+          "quantity": 3
+        }
+      ],
+      "order_id": "6f479b7f-4827-4329-8459-0492d9d16ddc"
+    }
+  ]
+}
+Response headers
+ content-length: 332 
+ content-type: application/json 
+ date: Sun, 03 Dec 2023 17:58:32 GMT 
+ server: Werkzeug/2.0.2 Python/3.11.4 
+ vary: Cookie 
+Responses
+
+
+####################
+Get All Orders API/list_all_orders
+####################
+
+Server response
+Code	Details
+200
+Undocumented
+Response body
+Download
+{
+  "items": [
+    {
+      "available_quantity": 25,
+      "calories_per_gm": 20,
+      "item_id": "710763bd-6002-43db-9f22-0b0e72a92fb9",
+      "item_name": "Milk",
+      "unit_price": 35
+    },
+    {
+      "available_quantity": 12,
+      "calories_per_gm": 25,
+      "item_id": "97a00458-b74f-4249-a001-54970d2bd1d7",
+      "item_name": "Bread",
+      "unit_price": 40
+    }
+  ]
+}
+Response headers
+ content-length: 392 
+ content-type: application/json 
+ date: Sun, 03 Dec 2023 17:59:27 GMT 
+ server: Werkzeug/2.0.2 Python/3.11.4 
+ vary: Cookie 
+Responses
+
+########################
+List All Items API/list_items
+########################
+
+
+Server response
+Code	Details
+200
+Undocumented
+Response body
+Download
+{
+  "items": [
+    {
+      "available_quantity": 23,
+      "calories_per_gm": 20,
+      "item_id": "710763bd-6002-43db-9f22-0b0e72a92fb9",
+      "item_name": "Milk",
+      "unit_price": 35
+    },
+    {
+      "available_quantity": 9,
+      "calories_per_gm": 25,
+      "item_id": "97a00458-b74f-4249-a001-54970d2bd1d7",
+      "item_name": "Bread",
+      "unit_price": 40
+    }
+  ]
+}
+Response headers
+ content-length: 391 
+ content-type: application/json 
+ date: Sun, 03 Dec 2023 18:05:24 GMT 
+ server: Werkzeug/2.0.2 Python/3.11.4 
+ vary: Cookie 
+Responses
